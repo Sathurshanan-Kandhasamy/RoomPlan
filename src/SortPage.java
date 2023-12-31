@@ -11,13 +11,8 @@ public class SortPage extends JFrame
 
     public SortPage(LinkedList<TextDetails> textDetails)
     {
-        //Calculate the height we want for the window. The first section {textDetails.size() * 25} calculates the amount of space
-        //needed to account for the rows being generated to show the word counts. This section should be using the same calculation as
-        //the first section of the grid building code to determine the yPos.
-        //The last section of this calculation { +65 } is just to add some extra space to allow for margins and additional components.
-        //If more components are needed just increase this value until they all fit alongside the data rows.
+        //Calculate the height for the window.
         int windowHeight = textDetails.size() * 25 + 65;
-        //To change the size of the window either change the value for the width or modify the calculation above for adjusting the height.
         setSize(200,windowHeight);
 
         setLocation(200,200);
@@ -58,11 +53,11 @@ public class SortPage extends JFrame
 
         for (int i = 0; i < textDetailsList.size(); i++)
         {
-            //Get the text from the current text list entry
+            //Get the text from the current text list entry.
             String text = textDetailsList.get(i).text;
-            //get the count value from the current text list entry and convert it ot a string.
+            //Get the count value from the current text list entry and convert it ot a string.
             String count = "" + textDetailsList.get(i).count;
-            //Add the 2 values to their columns in the current textArray row
+            //Add the 2 values to their columns in the current textArray row.
             textArray[0][i].setText(text);
             textArray[1][i].setText(count);
         }

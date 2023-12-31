@@ -88,16 +88,14 @@ public class MainForm extends JFrame
             }
         });
 
-        //Create a grid data model to store our file data prior to copying it to the text array
+        //Create a grid data model to store our file data prior to copying it to the text array.
         GridData gridData = SelectAndLoadFileData();
 
 
         //If the file read returned data and didn't return null, put the data on screen.
         if (gridData != null)
         {
-            //Somewhere here you will pass the header data from the model into the header text fields
-
-            //Cycle through the text grid array
+            //Cycle through the text grid array.
             for (int x = 0; x < textGrid.length; x++)
             {
                 for (int y = 0; y < textGrid[x].length; y++)
@@ -114,15 +112,15 @@ public class MainForm extends JFrame
 
     private void PopulateSortForm()
     {
-        //Create a list to hold the text values and their counts
+        //Create a list to hold the text values and their counts.
         LinkedList<TextDetails> textCountList = new LinkedList<>();
 
-        //Cycle through the 2D array of fields
+        //Cycle through the 2D array of fields.
         for (int x = 0; x < textGrid.length; x++)
         {
             for (int y = 0; y < textGrid[x].length; y++)
             {
-                //If the current field is empty, skip to the next loop cycle
+                //If the current field is empty, skip to the next loop cycle.
                 if (textGrid[x][y].getText().isEmpty())
                 {
                     continue;
@@ -133,7 +131,7 @@ public class MainForm extends JFrame
                 //If not, add it
                 if (index == -1)
                 {
-                    //Add the word to the list with a count of 1
+                    //Add the word to the list with a count of 1.
                     textCountList.add(new TextDetails(word,1));
                 }
                 //If so, increase the count for that item
@@ -147,13 +145,13 @@ public class MainForm extends JFrame
 
         //Sort the list - this requires the comparable interface to be applied to the TextDetails objects in the list.
         Collections.sort(textCountList);
-        //Pass the list to the sort form and open it on screen
+        //Pass the list to the sort form and open it on screen.
         new SortPage(textCountList);
     }
 
     private int CheckListForItem(LinkedList<TextDetails> textCountList, String text)
     {
-        //Cycle through the current list of text values
+        //Cycle through the current list of text values.
         for (int i = 0; i < textCountList.size(); i++)
         {
             //Get the index of the current loop and check if the text value of that entry
@@ -198,7 +196,7 @@ public class MainForm extends JFrame
         //Make the file dialog visible on screen. This will lock the parent screen until the user is finished with the dialog.
         dialog.setVisible(true);
 
-        //Get the slected file name provided by the user
+        //Get the selected file name provided by the user.
         String fileName = dialog.getFile();
         //If the file name is empty or is just the extension type without any name before it. Return null.
         if (fileName == null || fileName.isEmpty() || fileName.equalsIgnoreCase(extension))
@@ -206,10 +204,9 @@ public class MainForm extends JFrame
             return null;
         }
         //If the filename extension has been changed and no longer matches the provided extension type.
-        //NOTE: You might not always do this step if you want to allow the user to pick their own extension type.
         if (fileName.endsWith(extension) == false)
         {
-            //Split the filename into sections
+            //Split the filename into sections.
             String[] temp = fileName.split("\\.");
             //Take the first part fo the file name (the name section) and add the file extension back to the end of it.
             fileName = temp[0] + extension;
@@ -237,9 +234,9 @@ public class MainForm extends JFrame
         }
         //Create a model to hold our filedata
         GridData fileData;
-        //Get the absolute file path of the file to be loaded
+        //Get the absolute file path of the file to be loaded.
         String filePath = dialog.getDirectory() + fileName;
-        //Check the file path extension. If the xtension is .csv or .raf, load the file with the correct method.
+        //Check the file path extension. If the extension is .csv or .raf, load the file with the correct method.
         //Otherwise, post an error message to the user.
         if (filePath.endsWith(".csv"))
         {

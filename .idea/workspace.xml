@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cec320c-a9ab-4c1e-8327-4837135f8d23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GridData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GridData.raf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RoomPlan.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GridData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TextDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UIBuilderLibrary.java" afterDir="false" />
+    <list default="true" id="3cec320c-a9ab-4c1e-8327-4837135f8d23" name="Changes" comment="Add project files.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +49,19 @@
       <option name="presentableId" value="Default" />
       <updated>1700544345798</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add project files.">
+      <option name="closed" value="true" />
+      <created>1700544926014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544926014</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add project files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add project files." />
   </component>
 </project>
